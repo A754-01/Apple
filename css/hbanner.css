@@ -1,0 +1,35 @@
+.hbanner {
+  margin: 10px 0;
+  display: flex;
+}
+.hbanner .banner {
+  margin: 10px 0;
+  padding: 0;
+}
+.hbanner .banner:nth-child(1) {
+  flex: 1;
+  margin: 10px 5px 10px 10px;
+  background-image: url(../img/hbanner1.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+.hbanner .banner:nth-child(2) {
+  flex: 1;
+  margin: 10px 10px 10px 5px;
+  background-image: url(../img/hbanner2.jpg);
+  background-position: center bottom;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 840px) {
+  .hbanner {
+    display: block;
+  }
+  .hbanner .banner:nth-child(1) {
+    margin: 10px 0;
+  }
+  .hbanner .banner:nth-child(2) {
+    margin: 10px 0;
+  }
+}

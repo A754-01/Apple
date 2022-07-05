@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
+    'Arial', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  width: 100%;
+  height: 47px;
+  background-color: #313132;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a,
+  label {
+    color: #fff;
+
+    width: 102px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center 0;
+  }
+  .logo {
+    height: 44px;
+    background-image: url(../img/apple.svg);
+    opacity: 0.8;
+    transition: all 0.2s;
+  }
+  .logo:hover {
+    opacity: 1;
+  }
+  .search {
+    height: 44px;
+    background-image: url(../img/search.svg);
+    opacity: 0.8;
+    transition: all 0.2s;
+  }
+  .search:hover {
+    opacity: 1;
+  }
+  .buy {
+    height: 44px;
+    background-image: url(../img/buy.svg);
+    opacity: 0.8;
+    transition: all 0.2s;
+  }
+  .buy:hover {
+    opacity: 1;
+  }
+  .text {
+    opacity: 0.8;
+    transition: all 0.2s;
+    font-weight: 100;
+  }
+  .text:hover {
+    opacity: 1;
+  }
+  .toggleBtn {
+    height: 44px;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    display: none;
+
+    .line {
+      height: 0.5px;
+      width: 17px;
+      background-color: #fff;
+      opacity: 0.5;
+      transition: all 0.5s;
+      transform-origin: left center;
+    }
+    .line:nth-child(1) {
+      position: absolute;
+      left: calc(50%-9px);
+      top: 14px;
+    }
+    .line:nth-child(2) {
+      position: absolute;
+      left: calc(50%-9px);
+      top: 26px;
+    }
+  }
+  .navpage {
+    display: flex;
+    height: 0vh;
+    width: 100vw;
+    min-width: 320px;
+    overflow: hidden;
+    transition: all 0.6s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #000;
+  }
+  .navMain {
+    width: 100%;
+  }
+}
+// 设定屏幕小于840像素时的样式
+@media screen and (max-width: 840px) {
+  .nav {
+    justify-content: space-between;
+    .toggleBtn {
+      display: flex;
+      margin-left: 10px;
+      position: relative;
+      z-index: 999;
+      cursor: pointer;
+
+      .line {
+        display: block;
+        order: 1;
+      }
+    }
+    .toggleBtn:hover .line {
+      opacity: 1;
+    }
+
+    .text {
+      display: none;
+    }
+    .logo {
+      order: 2;
+      position: relative;
+      z-index: 999;
+    }
+    .buy {
+      order: 3;
+    }
+    #choose:checked ~ .toggleBtn {
+      .line:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      .line:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+
+    #choose:checked ~ .navpage {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: #000000;
+      color: #fff;
+      flex-direction: column;
+      padding-top: 54px;
+    }
+
+    .navMain {
+      .searchInput {
+        margin: 0 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 36px;
+        min-width: 200px;
+        border-radius: 4px;
+        color: #ccc;
+        background-color: rgba(45, 45, 45, 0.98);
+
+        .icon {
+          background-image: url(../img/search.svg);
+          height: 45px;
+          width: 40px;
+          min-width: 35px;
+          background-repeat: no-repeat;
+          background-position: center 0;
+        }
+
+        input {
+          flex: 1;
+          margin: 0 10px 0 0;
+          height: 100%;
+          background: none;
+          border: none;
+          outline: none;
+          color: #fff;
+          font-size: 19px;
+          opacity: 0.8;
+          transition: all 0.5s;
+        }
+
+        input:hover {
+          opacity: 1;
+        }
+      }
+      .hr {
+        border-bottom: 1px solid #333;
+        padding-bottom: 15px;
+      }
+      .navList {
+        margin: 0 40px;
+        .text {
+          display: flex;
+          height: 50px;
+          width: 100%;
+          border-bottom: 0.5px solid #333;
+          line-height: 50px;
+          font-weight: 400;
+          color: #fff;
+          transition: all 0.5s;
+          opacity: 0.8;
+        }
+        .text:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

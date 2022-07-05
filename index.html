@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/banner.css" />
+    <link rel="stylesheet" href="./css/hbanner.css" />
+  </head>
+
+  <body>
+    <!-- 1、分析结构  -->
+    <!-- 2、先写html -->
+    <!-- 3、在写css -->
+    <div class="nav">
+      <a href="" class="logo"></a>
+      <a href="" class="text">Mac</a>
+      <a href="" class="text">iPad</a>
+      <a href="" class="text">iPhone</a>
+      <a href="" class="text">Watch</a>
+      <a href="" class="text">TV</a>
+      <a href="" class="text">Music</a>
+      <a href="" class="text">Support</a>
+      <a href="" class="search text"></a>
+      <a href="" class="buy"> </a>
+      <input
+        hidden="hidden"
+        type="checkbox"
+        name="choose"
+        id="choose"
+        value=""
+      />
+      <label for="choose" class="toggleBtn">
+        <span class="line"></span>
+        <span class="line"></span>
+      </label>
+      <!-- div.navpage>.navMain>(.searchInput+.navList>(a.navText)*7) -->
+      <div class="navpage">
+        <div class="navMain">
+          <div class="hr">
+            <div class="searchInput">
+              <div class="icon"></div>
+              <input type="text" placeholder="Search apple.com" />
+            </div>
+          </div>
+          <div class="navList">
+            <a href="" class="text">Mac</a>
+            <a href="" class="text">iPad</a>
+            <a href="" class="text">iPhone</a>
+            <a href="" class="text">Watch</a>
+            <a href="" class="text">TV</a>
+            <a href="" class="text">Music</a>
+            <a href="" class="text">Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner">
+      <h1>iPhone 13 Pro</h1>
+      <h2>Oh. So. Pro.</h2>
+
+      <div class="link">
+        <span><a href="">Learn more </a> ></span>
+        <span><a href="">Buy </a>></span>
+      </div>
+    </div>
+
+    <div class="hbanner">
+      <div class="banner">
+        <h1>Studio Display</h1>
+        <h2>A sight to be bold.</h2>
+
+        <div class="link">
+          <span><a href="">Learn more </a> ></span>
+          <span><a href="">Buy </a>></span>
+        </div>
+      </div>
+      <div class="banner">
+        <h1>Apple Card</h1>
+        <h2>Get up to 3% Daily Cash back with every purchase.</h2>
+
+        <div class="link">
+          <span><a href="">Learn more </a> ></span>
+          <span><a href="">Buy </a>></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
